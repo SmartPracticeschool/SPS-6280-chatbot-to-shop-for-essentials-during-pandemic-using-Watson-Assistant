@@ -1,0 +1,1362 @@
+{
+  "intents": [
+    {
+      "intent": "exit",
+      "examples": [
+        {
+          "text": "Cancel this process"
+        },
+        {
+          "text": "Exit"
+        },
+        {
+          "text": "I want to stop"
+        },
+        {
+          "text": "never mind"
+        },
+        {
+          "text": "stop the order"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Grocery",
+      "examples": [
+        {
+          "text": "grocery"
+        },
+        {
+          "text": "rice"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "menu",
+      "examples": [
+        {
+          "text": "item"
+        },
+        {
+          "text": "items"
+        },
+        {
+          "text": "menu"
+        },
+        {
+          "text": "Menu please"
+        },
+        {
+          "text": "product list"
+        },
+        {
+          "text": "products"
+        },
+        {
+          "text": "show me your product"
+        },
+        {
+          "text": "what is today's menu"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "name",
+      "examples": [
+        {
+          "text": "s.biswas"
+        },
+        {
+          "text": "s.k.biswas"
+        },
+        {
+          "text": "souvik"
+        },
+        {
+          "text": "souvik biswas"
+        },
+        {
+          "text": "souvik kumar biswas"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Offers",
+      "examples": [
+        {
+          "text": "Discounts"
+        },
+        {
+          "text": "Rebate"
+        }
+      ],
+      "description": "offers"
+    },
+    {
+      "intent": "order",
+      "examples": [
+        {
+          "text": "order"
+        },
+        {
+          "text": "order please"
+        },
+        {
+          "text": "take order"
+        }
+      ],
+      "description": "take orders"
+    },
+    {
+      "intent": "vegetables",
+      "examples": [
+        {
+          "text": "veg"
+        },
+        {
+          "text": "vegetables"
+        },
+        {
+          "text": "vegies"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "choice",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "no",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "good afternoon",
+          "synonyms": [
+            "afternoon",
+            "ga"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good evening",
+          "synonyms": [
+            "ge"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good morning",
+          "synonyms": [
+            "gm",
+            "morning"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Hello",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hi",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "grocery",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "grocery",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "Items",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Cabbage",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "chili",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "detergent",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "onion",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "potatoes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "pulses",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "pumpkin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "rice",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "name",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "name",
+          "patterns": [
+            "^\\s*([A-Za-z]{1,}([\\.,] |[-']| )?)+[A-Za-z]+\\.?\\s*$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "offers",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "rebate",
+          "synonyms": [
+            "Discount",
+            "offer",
+            "rebates"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": [
+            "buy"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "COD",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "vegetable",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "vegetables",
+          "synonyms": [
+            "vegies"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_7_1603140422549",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1603121610556",
+      "context": {
+        "Items": "@Items"
+      },
+      "conditions": "@Items",
+      "event_name": "input",
+      "dialog_node": "handler_10_1603121610561"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1603169880757",
+      "context": {
+        "pin": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_10_1603169880763"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "please see the item list and select the items you want"
+              },
+              {
+                "text": "Potatoes Rs 40/Kg"
+              },
+              {
+                "text": "Chili Rs 200/Kg"
+              },
+              {
+                "text": "Onion Rs 50/Kg"
+              },
+              {
+                "text": "Pumpkin Rs 50/Kg"
+              },
+              {
+                "text": "Cabbage Rs 30/Kg"
+              },
+              {
+                "text": "Rice Rs 30/Kg"
+              },
+              {
+                "text": "Pulses Rs 50/Kg"
+              },
+              {
+                "text": "Detergent Rs 50/Kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "slot_10_1603121610556",
+      "context": {},
+      "event_name": "focus",
+      "dialog_node": "handler_1_1603121610561",
+      "previous_sibling": "handler_10_1603121610561"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1603170200490",
+      "context": {
+        "phone": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_1_1603170200496"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "please see the item list and select the items you want"
+              },
+              {
+                "text": "Potatoes Rs 40/Kg"
+              },
+              {
+                "text": "Chili Rs 200/Kg"
+              },
+              {
+                "text": "Onion Rs 50/Kg"
+              },
+              {
+                "text": "Pumpkin Rs 50/Kg"
+              },
+              {
+                "text": "Cabbage Rs 30/Kg"
+              },
+              {
+                "text": "Rice Rs 30/Kg"
+              },
+              {
+                "text": "Pulses Rs 50/Kg"
+              },
+              {
+                "text": "Detergent Rs 50/Kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1603055485047",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1603055528344",
+      "previous_sibling": "slot_4_1603121632133"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "please provide payment mode. Currently we are supporting following payment mode UPI,COD,CARD"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1603200711417",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1603200711422",
+      "previous_sibling": "handler_6_1603200711422"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "please provide your phone number"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1603170200490",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1603170200496",
+      "previous_sibling": "handler_1_1603170200496"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1603121632133",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_4_1603121632137"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1603121610556",
+      "event_name": "nomatch",
+      "dialog_node": "handler_5_1603806392889",
+      "previous_sibling": "handler_6_1603806146148"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "how much item do you want"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1603121632133",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1603121632137",
+      "previous_sibling": "handler_4_1603121632137"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1603200711417",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_6_1603200711422"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1603121610556",
+      "event_name": "nomatch",
+      "dialog_node": "handler_6_1603806145986",
+      "previous_sibling": "handler_1_1603121610561"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1603121610556",
+      "event_name": "nomatch",
+      "dialog_node": "handler_6_1603806146148",
+      "previous_sibling": "handler_6_1603806145986"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "node_6_1603055485047",
+      "next_step": {
+        "behavior": "skip_all_slots"
+      },
+      "conditions": "#exit",
+      "event_name": "generic",
+      "dialog_node": "handler_6_1603811460722",
+      "previous_sibling": "response_10_1603863138453"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "please provide your pincode number"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_7_1603169880757",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1603169880763",
+      "previous_sibling": "handler_10_1603169880763"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1603121610556",
+      "event_name": "nomatch",
+      "dialog_node": "handler_8_1603806393042",
+      "previous_sibling": "handler_5_1603806392889"
+    },
+    {
+      "type": "frame",
+      "title": "copy1",
+      "output": {
+        "deleted": "<?context.remove('$Items')?><?context.remove('$numbers')?><?context.remove('$choice')?>",
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "please provide your district name"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1603137148317",
+      "context": {
+        "name1": "@name.literal"
+      },
+      "conditions": "@name",
+      "dialog_node": "node_1_1603147659161"
+    },
+    {
+      "type": "frame",
+      "title": "copy1 - copy1",
+      "output": {
+        "deleted": "<?context.remove('$Items')?><?context.remove('$numbers')?><?context.remove('$choice')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1603147659161",
+      "context": {
+        "name2": "@name.literal"
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "@name",
+      "dialog_node": "node_1_1603167027036"
+    },
+    {
+      "type": "standard",
+      "parent": "node_6_1603055485047",
+      "dialog_node": "node_2_1603865148408",
+      "previous_sibling": "node_3_1603133199620"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "deleted": "<?context.remove('Items')?><?context.remove('number')?><?context.remove('choice')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1603055485047",
+      "context": {
+        "store": "$Items"
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "@choice:yes",
+      "dialog_node": "node_3_1603133199620",
+      "previous_sibling": "node_3_1603143280515"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "deleted": "<?context.remove('Items')?><?context.remove('number')?><?context.remove('choice')?>",
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Following information is required for delivering items "
+              },
+              {
+                "text": "Enter your name"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1603055485047",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@choice:no",
+      "dialog_node": "node_3_1603143280515",
+      "previous_sibling": "handler_6_1603811460722"
+    },
+    {
+      "type": "standard",
+      "title": "Product Category",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Grocery"
+              },
+              {
+                "text": "Vegetables"
+              },
+              {
+                "text": "please tell what you want to explore"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#menu",
+      "dialog_node": "node_4_1602960755207",
+      "previous_sibling": "node_9_1602967908673",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "frame",
+      "output": {
+        "deleted": "<?context.remove('$Items')?><?context.remove('$numbers')?><?context.remove('$choice')?>",
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "please enter your city/village name"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1603143280515",
+      "context": {
+        "name": "@name.literal"
+      },
+      "conditions": "@name",
+      "dialog_node": "node_4_1603137148317",
+      "previous_sibling": "response_3_1603866251432"
+    },
+    {
+      "type": "frame",
+      "title": "copy1 - copy1 - copy1",
+      "output": {
+        "deleted": "<?context.remove('$Items')?><?context.remove('$numbers')?><?context.remove('$choice')?>",
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thanks $name for choosing us. Following items <?$s.join(',')?>  will be delivered to the address mentioned below"
+              },
+              {
+                "text": "Phone number $phone"
+              },
+              {
+                "text": "Village/City $name1"
+              },
+              {
+                "text": "District $name2"
+              },
+              {
+                "text": "Pincode $pin"
+              },
+              {
+                "text": "your mode of payment is $payment"
+              },
+              {
+                "text": "please visit again"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1603167027036",
+      "context": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "true",
+      "dialog_node": "node_5_1603169537193"
+    },
+    {
+      "type": "frame",
+      "title": "order",
+      "parent": "node_9_1603884188164",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "true",
+      "dialog_node": "node_6_1603055485047",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "delete": "<?context.remove('name')?><?context.remove('name1')?><?context.remove('name2')?><?context.remove('pin')?><?context.remove('phone')?><?context.remove('payment')?><?context.remove('Items')?><?context.remove('store')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1603169537193",
+      "context": {
+        "s": "<?$s.clear()?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "true",
+      "dialog_node": "node_6_1603169537199",
+      "previous_sibling": "slot_8_1603200711417"
+    },
+    {
+      "type": "standard",
+      "title": "Vegetables",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Potatoes Rs 40/Kg"
+              },
+              {
+                "text": "Chili Rs 200/kg"
+              },
+              {
+                "text": " Pumpkin Rs 50/Kg "
+              },
+              {
+                "text": "Onion Rs 50/kg"
+              },
+              {
+                "text": "Cabbages Rs 30/Kg"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#vegetables || @vegetable",
+      "dialog_node": "node_7_1602962975503",
+      "previous_sibling": "node_8_1603050623160"
+    },
+    {
+      "type": "standard",
+      "title": "offers",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "10% discount on vegetables"
+              },
+              {
+                "text": "5% discount on grocery"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "context": {},
+      "conditions": "#Offers || @offers",
+      "dialog_node": "node_7_1602964954094",
+      "previous_sibling": "node_7_1602962975503"
+    },
+    {
+      "type": "standard",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@name",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_7_1603140422549",
+      "previous_sibling": "node_9_1603884188164"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "deleted": "<?context.remove('choice')",
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1603133199620",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1603055485047"
+      },
+      "conditions": "true",
+      "dialog_node": "node_7_1603181246863"
+    },
+    {
+      "type": "standard",
+      "title": "grocery",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Rice Rs 30 /Kg"
+              },
+              {
+                "text": "Pulses Rs 50/Kg"
+              },
+              {
+                "text": "Detergent Rs 50/Kg"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Grocery || @grocery",
+      "dialog_node": "node_8_1603050623160",
+      "previous_sibling": "node_4_1602960755207"
+    },
+    {
+      "type": "standard",
+      "title": "greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#greetings || @greetings",
+      "dialog_node": "node_9_1602967908673",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "context": {
+        "s": []
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1603055485047"
+      },
+      "conditions": "#order || @order",
+      "dialog_node": "node_9_1603884188164",
+      "previous_sibling": "node_7_1602964954094"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "your all order is cancelled .Please visit again"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1603055485047",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1603169537199"
+      },
+      "conditions": "$store",
+      "dialog_node": "response_10_1603831336607",
+      "previous_sibling": "response_9_1603812014651"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1603055485047",
+      "dialog_node": "response_10_1603863138453",
+      "previous_sibling": "response_10_1603831336607"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602967908673",
+      "conditions": "@greetings:Hi",
+      "dialog_node": "response_2_1602967960789"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "good evening"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602967908673",
+      "conditions": "@greetings:(good evening)",
+      "dialog_node": "response_2_1602968246675",
+      "previous_sibling": "response_9_1602968203641"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "good afternoon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602967908673",
+      "conditions": "@greetings:(good afternoon)",
+      "dialog_node": "response_2_1603046506317",
+      "previous_sibling": "response_2_1602968246675"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "deleted": "<?context.remove('Items')?><?context.remove('number')?><?context.remove('choice')?>",
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Following information is required for delivering items "
+              },
+              {
+                "text": "Enter your name"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1603143280515",
+      "disabled": true,
+      "conditions": "@choice:yes",
+      "dialog_node": "response_3_1603866251432"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You have purchased item name $Items  quantity $number"
+              },
+              {
+                "text": "Do you want to purchase more item "
+              },
+              {
+                "text": "yes/no"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1603055485047",
+      "context": {
+        "s": "<?$s.append($Items)?>"
+      },
+      "conditions": "$Items && $number",
+      "dialog_node": "response_4_1603811752059"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602967908673",
+      "conditions": "@greetings:Hello",
+      "dialog_node": "response_7_1602968149785",
+      "previous_sibling": "response_2_1602967960789"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "you have some selected items. write order and procced"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1603140422549",
+      "conditions": "$Items",
+      "dialog_node": "response_8_1603893685293"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "very good morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602967908673",
+      "conditions": "@greetings:(good morning)",
+      "dialog_node": "response_9_1602968203641",
+      "previous_sibling": "response_7_1602968149785"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "deleted": "<?context.remove('Items')?>",
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "your order is canceled"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1603055485047",
+      "context": {},
+      "conditions": "$store==null",
+      "dialog_node": "response_9_1603812014651",
+      "previous_sibling": "response_4_1603811752059"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How can I help you sir"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1603140422549",
+      "conditions": "$Items==null",
+      "dialog_node": "response_9_1603893816430",
+      "previous_sibling": "response_8_1603893685293"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1603055485047",
+      "variable": "$Items",
+      "dialog_node": "slot_10_1603121610556",
+      "previous_sibling": "node_2_1603865148408"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1603055485047",
+      "variable": "$number",
+      "dialog_node": "slot_4_1603121632133",
+      "previous_sibling": "slot_10_1603121610556"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1603169537193",
+      "variable": "$phone",
+      "dialog_node": "slot_4_1603170200490",
+      "previous_sibling": "slot_7_1603169880757"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1603169537193",
+      "variable": "$pin",
+      "dialog_node": "slot_7_1603169880757"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_5_1603169537193",
+      "variable": "$payment",
+      "dialog_node": "slot_8_1603200711417",
+      "previous_sibling": "slot_4_1603170200490"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome to smart store",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Welcome to smart store browse our product list"
+              },
+              {
+                "text": "Hi, I am a chatbot from smart store .I can make your shopping experience easy and enjoyable."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "context": {},
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
